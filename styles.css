@@ -10,8 +10,8 @@
   font-family: 'Kanit', sans-serif;
 }
 .doc{
-  width: 35rem;
-  box-shadow: 2px 7px 10px ;
+  width: 32rem;
+  box-shadow: 2px 6px 17px #b2bac0;
   border-radius: 20px;
   margin: auto;
   padding: 20px;
@@ -19,7 +19,8 @@
 }
 #start button{
   padding: 10px;
-  margin: 10px 80px 10px;
+  width: 20rem;
+  margin: 10px 3.5rem 10px;
   border-radius: 10px;
   border-style: dotted;
   background-color: #0a2342;
@@ -96,7 +97,7 @@ input{
   
 footer{
   text-align: center;
-  margin-top: 60px;
+  margin-top: 40px;
   
 }
 footer a{
@@ -106,3 +107,4 @@ footer a:hover{
   color: #0a2342;
   text-decoration: none;
 }
+
