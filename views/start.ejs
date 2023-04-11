@@ -28,19 +28,25 @@
     
     <div id="popup-container" style="display: none;">
         <div id="popup-content">
-          <p>Your word for the day is:</p>
-          <p>Meaning:</p>
-          <p>Transcription:</p>
+          <p>Your word for the day is: <%=word.word%> </p>
+          <%word.definitions.forEach(function(wordType){%>
+           <p>Part of Speech: <%=wordType.partOfSpeech%></p> 
+           <p>Definition: <%=wordType.text%></p>
+           <%})%>
+          <p class="wordOfDayTranscription">Transcription: </p>
           <button id="close-btn">Close</button>
         </div>
       </div>
-      <button id="popup-btn" class="wordClick" onclick="document.getElementById('popup-container').style.display='block'">Word of the Day!🤩</button>
+      <button id="popup-btn" class="wordClick" onclick="popup()">Word of the Day!🤩</button>
 
 
 
       <div id="search">
-        <label for="Search">Search for a new word:</label>
-        <input type="text" placeholder="e.g 'Obscure'">
+        <form action="/search" method="post">
+          <label for="Search">Search for a new word:</label>
+          <input name="search" type="text" placeholder="e.g 'Obscure'">
+          <button type="submit">Submit</button>
+        </form>
       </div>
 
       <footer>
