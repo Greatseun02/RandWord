@@ -25,33 +25,25 @@
 </div>
 
 
-    
-    <div id="popup-container" style="display: none;">
-        <div id="popup-content">
-          <p>Your word for the day is: <%=word%> </p>
-          <%dicWord.definitions.forEach(function(wordType){%>
-           <p>Part of Speech: <%=lodash.upperFirst(wordType.partOfSpeech)%></p> 
-           <p>Definition: <%=wordType.text%></p>
-           <%})%> 
-           <p>Transcription: <%=transcription.raw%></p>
-          <div id="btn">
-            <button id="close-btn">Close</button>
+
+        <div >
+          <div>
+            <p>Word: <%=word%></p>
+            
+            <p>Transcription: <%=transcription.raw%></p>
+            <%dicWord.forEach(function(wordType){%>
+            
+              <p>Part of Speech:  <%=wordType.partOfSpeech%></p>
+              <p>Definition: <%=wordType.text%></p>
+          
+             <%})%>
+             <div id="btn">
+              <a href="/start"><button id="close-btn">Close</button></a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div id="wordSection">
-        <button id="popup-btn" class="wordClick" onclick="popup()">Word of the Day!🤩</button>
-
-       
-        <div id="search">
-          <form action="/search" method="post">
-            <label for="Search">Search for a new word:</label>
-            <input name="search" type="text" placeholder="e.g 'Obscure'">
-            <button type="submit" class="submit-btn" onclick="pop()">Submit</button>
-          </form>
-        </div>
-      </div>
+        
+      
       <footer>
         <p>Made with ❤️ by <a href="https://github.com/theCephas">Iseoluwa</a> & <a href="https://github.com/greatseun02">Seun</a> <a href="https://github.com/theCephas/RandWord"><img src="./images/github.png" alt=""></a> </p> 
     </footer>

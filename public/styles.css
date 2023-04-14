@@ -25,6 +25,7 @@
   border-style: dotted;
   background-color: #0a2342;
   border-color: #ecf0f3;
+  letter-spacing: 4px;
 }
 
 #start{
@@ -65,36 +66,108 @@ input{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: hsla(360, 100%, 100%, 0.97);
     z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
   #popup-content {
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 6px 17px #b2bac0;
+    text-align: left;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-self: center;
+    width: 50%;
+    font-size: 1.5rem;
   }
-  
+  .popup-search{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(360, 100%, 100%, 0.97);
+    z-index: 999;
+  }
+  #popup-details{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 6px 17px #b2bac0;
+    text-align: left;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-self: center;
+    width: 50%;
+    font-size: 1.5rem;
+  }
   #close-btn {
     margin-top: 10px;
     padding: 10px;
-    background-color: #333;
+    background-color: #0a2342;
     color: #fff;
     border: none;
     border-radius: 5px;
+    width: 80px;
     cursor: pointer;
   }
-
+  #btn{
+    display: flex;
+    justify-content: center;
+  }
   #popup-btn{
     padding: 10px;
     margin-top: 50px;
+    margin-left: 25%;
+    
   }
-  
+
+#wordSection{
+  width: 35rem;
+  box-shadow: 2px 6px 17px #b2bac0;
+  border-radius: 20px;
+  margin: auto;
+  padding: 20px;
+}
+#search{
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 30px
+}
+label{
+  padding-bottom: 10px;
+}
+input{
+  align-self: center;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 17px #b2bac0;
+}
+.submit-btn{
+  border: none;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 15px;
+  background-color: #0a2342;
+  color: #fff;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+.submit-btn:hover{
+  background-color: #b2bac0;
+  color: #0a2342;
+}
 footer{
   text-align: center;
   margin-top: 40px;
